@@ -4,7 +4,7 @@
     
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>OpenRooms</title>
+    <title>Single View Metrology in the Wild</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./ScaleNet_files/codemirror.min.css">
     <link rel="stylesheet" href="./ScaleNet_files/app.css">
     <link rel="stylesheet" href="./ScaleNet_files/bootstrap.min(1).css">
+    <link rel="stylesheet" href="./ScaleNet_files/rui.css">
 
     <script type="text/javascript" async="" src="./ScaleNet_files/analytics.js"></script><script type="text/javascript" async="" src="./ScaleNet_files/analytics(1).js"></script>
     <script type="text/javascript" async="" src="./ScaleNet_files/analytics(2).js"></script>
@@ -276,22 +277,17 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                     <li>
                         <a href="http://yannickhold.com/">
                             Yannick Hold-Geoffroy
-                          </a><sup>1</sup>
+                          </a><sup>2</sup>
                     </li>
                     <li>
                         <a href="https://fperazzi.github.io/">
                             Federico Perazzi
-                          </a><sup>1</sup>
+                          </a><sup>2</sup>
                     </li>
                     <li>
-                        <a href="https://jerrypiglet.github.io/">
-                            Rui Zhu
-                          </a><sup>1</sup>
-                      </li>
-                    <li>
-                        <a href="https://jerrypiglet.github.io/">
-                            Rui Zhu
-                          </a><sup>1</sup>
+                        <a href="https://www.researchgate.net/scientific-contributions/2136045390-Jonathan-Eisenmann">
+                            Jonathan Eisenmann
+                          </a><sup>2</sup>
                       </li>
                 </ul>
             </div>
@@ -301,30 +297,15 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://kovenyu.com/">
-                            Hong-Xing Yu
-                        </a><sup>3</sup>
-                    </li>
-                    <li>
                         <a href="http://www.kalyans.org/">
                             Kalyan Sunkavalli
-                        </a><sup>2</sup>
-                    </li>
-                    <li>
-                        <a href="http://www.miloshasan.net/">
-                            Miloš Hašan
-                        </a><sup>2</sup>
-                    </li>
-                    <li>
-                        <a href="http://cseweb.ucsd.edu/~ravir/">
-                            Ravi Ramamoorthi
-                        </a><sup>1</sup>
-                    </li>
+                          </a><sup>2</sup>
+                      </li>
                     <li>
                         <a href="http://cseweb.ucsd.edu/~mkchandraker/">
                             Manmohan Chandraker
-                        </a><sup>1</sup>
-                    </li>
+                          </a><sup>1</sup>
+                      </li>
                 </ul>
             </div>
         </div>
@@ -338,9 +319,6 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                     <li>
                         <sup>2</sup>Adobe
                     </li>
-                    <li>
-                        <sup>3</sup>Sun Yat-sen University
-                    </li>
                 </ul>
             </div>
         </div>
@@ -349,15 +327,27 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="https://arxiv.org/pdf/2007.12868.pdf">
-                            <img src="./ScaleNet_files/paper.jpg" height="120px"><br>
+                            <a href="https://arxiv.org/abs/2007.09529">
+                            <img src="./ScaleNet_files/paper.png" height="120px"><br>
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="http://cseweb.ucsd.edu/~viscomp/projects/NeuralIPS20Dataset/pipeline.mp4">
+                            <a href="./ScaleNet_files/1337-supp.pdf">
+                                <img src="./ScaleNet_files/1337-supp.png" height="120px"><br>
+                                <h4><strong>Supplementary</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./ScaleNet_files/ECCV20-LongVideo.pptx">
+                            <img src="./ScaleNet_files/slides.png" height="120px"><br>
+                                <h4><strong>Slides</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=LhynDB2rC9g&feature=youtu.be">
                             <img src="./ScaleNet_files/youtube_icon_dark.png" height="120px"><br>
-                                <h4><strong>Technical Video</strong></h4>
+                                <h4><strong>Long Video</strong></h4>
                             </a>
                         </li>
                         <li>
@@ -366,12 +356,12 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                                 <h4><strong>Code</strong></h4>(Coming soon)
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="https://github.com/lzqsd/InverseRenderingOfIndoorScene">
                             <img src="./ScaleNet_files/github_pad.png" height="120px"><br>
                                 <h4><strong>Applications</strong></h4>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
         </div>
@@ -383,7 +373,7 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                     &nbsp;&nbsp;&nbsp;
                 </h3>
                 <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
-                  <source src="http://cseweb.ucsd.edu/~viscomp/projects/NeuralIPS20Dataset/example.mp4" type="video/mp4">
+                  <source src="./ScaleNet_files/1337-shortVideo.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -396,7 +386,7 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                 </h3>
                 <img src="./ScaleNet_files/teaser.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                Large-scale photorealistic datasets of indoor scenes, with ground truth geometry, materials and lighting, are important for deep learning applications in scene reconstruction and augmented reality. The associated shape, material and lighting assets can be scanned or artist-created, both of which are expensive; the resulting data is usually proprietary. We aim to make the dataset creation process for indoor scenes widely accessible, allowing researchers to transform casually acquired scans to large-scale datasets with high-quality ground truth. We achieve this by estimating consistent furniture and scene layout, ascribing high quality materials to all surfaces and rendering images with spatially-varying lighting consisting of area lights and environment maps. We demonstrate an instantiation of our approach on the publicly available ScanNet dataset. Deep networks trained on our proposed dataset achieve competitive performance for shape, material and lighting estimation on real images and can be used for photorealistic augmented reality applications, such as object insertion and material editing. Importantly, the dataset and all the tools to create such datasets from scans will be released, enabling others in the community to easily build large-scale datasets of their own.
+                    Most 3D reconstruction methods may only recover scene properties up to a global scale ambiguity. We present a novel approach to single view metrology that can recover the <b>absolute scale of a scene</b> represented by 3D heights of objects or camera height above the ground as well as camera parameters of orientation and field of view, using just a monocular image acquired in unconstrained condition. Our method relies on data-driven priors learned by a deep network specifically designed to imbibe weakly supervised constraints from the interplay of the unknown camera with 3D entities such as object heights, through estimation of bounding box projections. We leverage categorical priors for objects such as humans or cars that commonly occur in natural images, as references for scale estimation. We demonstrate state-of-the-art qualitative and quantitative results on several datasets as well as applications including virtual object insertion. Furthermore, the perceptual quality of our outputs is validated by a user study.
                 </p>
             </div>
         </div>
@@ -409,19 +399,19 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                 <p class="text-justify">
                     </p><ul>
                         <li>
-                            A dataset with high-quality ground truth SVBRDF and spatially-varying lighting. 
+                            A state-of-the-art <b>Single View Metrology method</b> for images in the wild that performs geometric camera calibration with absolute scale—-horizon, field-of-view, and 3D camera height—from a monocular image.
                         </li>
                         <li>
-                            Photorealistic rendering with a GPU-accelerated physically-based renderer. 
+                            A <b>weakly supervised approach</b> to train the above method with only 2D bounding box annotations by using an in-network image formation model.
                         </li>
                         <li>
-                            Goal of open dataset with no proprietary assets, along with tools for users to create their own datasets.
+                            Application to <b>scale-consistent object insertion</b> in unconstrained images.
                         </li>
                         <li>
-                            State-of-the-art performance when used as training data for inverse rendering tasks.
+                            A new <b>dataset and benchmark</b> for single image scale estimation in the wild.
                         </li>
                         <li>
-                            All code, trained models, rendered images and other ground truth to be publicly available.
+                            All code and trained models are to be publicly available.
                         </li>
                     </ul>
                 <p></p>
@@ -430,12 +420,15 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Technical Video
+                    Long Video
                 </h3>
-                <div class="text-center">
-                    <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
-                        <source src="http://cseweb.ucsd.edu/~viscomp/projects/NeuralIPS20Dataset/pipeline.mp4" type="video/mp4">
-                    </video>
+                <!-- <div class="text-center"> -->
+                    <!-- <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                        <source src="./ScaleNet_files/1337-longVideo.mp4" type="video/mp4">
+                    </video> -->
+                    <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/LhynDB2rC9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div> -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LhynDB2rC9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -445,7 +438,7 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                 <h3>
                     Download
                 </h3>
-                <p class="text-justify">Our paper is currently under submission. To download the dataset, please send your request to the email <a>OpenRoomsDataset@gmail.com</a>. A download link will be sent to you once the dataset is released.
+                <p class="text-justify">All code and datasets are to be released on <a href="https://github.com/Jerrypiglet/ScaleNet">Github</a>.
                 </p>
             </div>
         </div>
@@ -454,8 +447,8 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
                 <h3>
                     Acknowledgments
                 </h3>
-                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
-                <p></p>
+                <p>Parts of this work were done when Rui Zhu was an intern at Adobe Research.</p>
+                <p>The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.</p>
             </div>
         </div>
     </div>
