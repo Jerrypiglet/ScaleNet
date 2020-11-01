@@ -1,0 +1,14 @@
+jupyterlab
+tensorboardX
+tqdm
+scikit-image
+termcolor
+opencv-python
+Pillow==6.1
+yacs
+torch==1.7.0
+torchvision
+torchsummary
+tensorboard
+pycocotools
+cityscapesscripts
