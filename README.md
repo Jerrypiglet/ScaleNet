@@ -31,6 +31,9 @@ Lanuch jupyter notebook. Kernel -> Change Kernel [to scalenet]
 ## Location
 `./RELEASE_SUN360_camPred_minimal`
 
+## Demo
+`./RELEASE_SUN360_camPred_minimal/1109-evalSUN350_RCNNOnly-RELEASE.ipynb`
+
 ## Description
 This network is trained on SUN360 dataset with supervision of some camera parameters (e.g. roll, pitch, field of view (or equivalently focal length), which can be converted to horizon as well). The release model takes in a random image, and estimates:
 - vfov (vertical field of view)
