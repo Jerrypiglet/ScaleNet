@@ -1,0 +1,9 @@
+*.pyc
+summary/
+maskrcnn-benchmark/
+maskrcnn-rui/
+maskrcnn_rui.egg-info/
+apex/
+build/
+RELEASE_SUN360_camPred_minimal/.ipynb_checkpoints/
+.ipynb_checkpoints/

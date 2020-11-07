@@ -6,7 +6,7 @@ To be released. Stay tuned by watching (subscribing to) the repo from the button
 # Installation
 ```bash
 conda create -y -n scalenet python=3.6
-conda activate scanelet
+conda activate scalenet
 pip install -r requirements.txt
 conda install nb_conda
 
