@@ -7,7 +7,7 @@ from scipy.special import softmax
 import os
 from utils.utils_misc import *
 from imageio import imread, imsave
-from panorama_cropping_dataset_generation.debugging import drawLine, showHorizonLine, showHorizonLineFromHorizon
+# from panorama_cropping_dataset_generation.debugging import drawLine, showHorizonLine, showHorizonLineFromHorizon
 from dataset_cvpr import bins2roll, bins2vfov, bins2horizon, bins2pitch
 from PIL import Image, ImageDraw, ImageFont
 import ntpath

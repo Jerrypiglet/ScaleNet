@@ -7,3 +7,12 @@ apex/
 build/
 RELEASE_SUN360_camPred_minimal/.ipynb_checkpoints/
 .ipynb_checkpoints/
+archive/
+rendering/tmp_dir/
+rendering/render/
+release_results/
+models/shaper_/
+data/coco_results/
+blender_render.log
+0fn.jpg
+checkpoint/

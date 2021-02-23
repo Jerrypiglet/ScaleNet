@@ -36,7 +36,7 @@ def batch_dict_to_list_of_dicts(batch_dict):
                     # new_dict[key] = content[0]
                     pass
                 else:
-                    print('>>>', idx, key, content)
+                    # print('>>>', idx, key, content)
                     new_dict[key] = content[idx]
         list_of_dicts.append(new_dict)
 

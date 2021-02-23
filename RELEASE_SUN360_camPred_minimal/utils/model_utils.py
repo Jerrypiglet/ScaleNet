@@ -6,7 +6,7 @@ import numpy as np
 # from dataset import yc_bins_centers, human_bins, yc_bins_centers_0, yc_bins_centers_1, human_bins_1, yc_bins_layers_list, fmm_bins_layers_list, v0_bins_layers_list, human_bins_layers_list
 # from dataset_coco import yc_bins_centers, human_bins, yc_bins_layers_list, fmm_bins_layers_list, v0_bins_layers_list, human_bins_layers_list
 
-from dataset_coco_pickle_noYannickMat import bins_lowHigh_list_dict, yc_bins_centers, human_bins, yc_bins_layers_list, fmm_bins_layers_list, v0_bins_layers_list, human_bins_layers_list, car_bins, car_bins_layers_list
+from dataset_coco_pickle_eccv import bins_lowHigh_list_dict, yc_bins_centers, human_bins, yc_bins_layers_list, fmm_bins_layers_list, v0_bins_layers_list, human_bins_layers_list, car_bins, car_bins_layers_list
 # from dataset_coco import bins_lowHigh_list_dict
 from dataset_cvpr import horizon_bins_centers, pitch_bins_centers, roll_bins_centers, vfov_bins_centers
 
@@ -135,6 +135,10 @@ def accu_model(input_dict, if_debug=False):
     if if_debug:
         print('---theta_yannick', theta_yannick)
     z =   - (f_pixels_yannick * yc_est) / (f_pixels_yannick * torch.sin(theta_yannick) - (vc - vb) * torch.cos(theta_yannick) + 1e-10)
+    print('---z', z)
+    print('---z1', - (f_pixels_yannick * yc_est))
+    print('---z2', (f_pixels_yannick * torch.sin(theta_yannick) - (vc - vb) * torch.cos(theta_yannick) + 1e-10))
+
     if if_debug:
         print('---z', z)
     if z.detach().cpu().numpy() < 0:
@@ -148,6 +152,30 @@ def accu_model(input_dict, if_debug=False):
         + (-f_pixels_yannick * torch.sin(theta_yannick) + vc * torch.cos(theta_yannick)) * z \
         + -f_pixels_yannick * yc_est) \
         / (y_person * torch.sin(theta_yannick) + z * torch.cos(theta_yannick) + 1e-10)
+    return vt_camEst, z, negative_z
+
+def accu_model_helanyi(input_dict, if_debug=False):
+    negative_z = False
+    yc_est, vb, y_person, v0, vc, f_pixels_yannick = input_dict['yc_est'], input_dict['vb'], input_dict['y_person'], input_dict['v0'], input_dict['vc'], input_dict['f_pixels_yannick']
+    theta_yannick = input_dict['pitch_est']
+
+    f = f_pixels_yannick
+    uc = 0
+    device = f.device
+    cos = torch.cos(-theta_yannick) # looking down: theta < 0
+    sin = torch.sin(-theta_yannick)
+    yc = yc_est
+    y = y_person
+    x = 0.
+    intrinsics = torch.tensor([[f, 0, uc], [0, f, vc], [0, 0, 1]]).to(device)
+    Rt = torch.tensor([[1, 0, 0, 0], [0, cos, sin, -yc*cos], [0, -sin, cos, yc * sin]]).to(device)
+    z = (-f * yc * cos + vc * yc * sin - (yc * sin)*vb) / (cos * vb - f * sin - vc * cos)
+    # print('---z', z)
+    # print('---z1', (-f * yc * cos + vc * yc * sin - (yc * sin)*vb))
+    # print('---z2', (cos * vb - f * sin - vc * cos))
+    xyz = torch.tensor([[x], [y], [z], [1.]]).to(device)
+    u_vt_1 = intrinsics @ Rt @ xyz
+    vt_camEst = u_vt_1[1] / u_vt_1[2]
     return vt_camEst, z, negative_z
 
 def accu_model_batch(input_dict, if_debug=False):

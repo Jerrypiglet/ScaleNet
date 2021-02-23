@@ -10,7 +10,7 @@ import glob
 
 from maskrcnn_benchmark.utils.comm import get_world_size
 
-from dataset_coco import bin2midpointpitch
+from dataset_coco_pickle_eccv import bin2midpointpitch
 from utils import utils_coco
 from utils.utils_misc import *
 import ntpath
